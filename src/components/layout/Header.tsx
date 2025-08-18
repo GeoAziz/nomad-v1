@@ -7,7 +7,7 @@ import { Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 import { Button } from '@/components/ui/button';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { cn } from '@/lib/utils';
 import { useIsMobile } from '@/hooks/use-mobile';
 
@@ -62,6 +62,9 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-full bg-background border-l-border/50">
+                 <SheetHeader className="sr-only">
+                    <SheetTitle>Mobile Navigation Menu</SheetTitle>
+                 </SheetHeader>
                  <div className="flex justify-between items-center mb-8">
                   <Link href="/" className="font-headline text-2xl font-bold text-glow" onClick={() => setSheetOpen(false)}>
                     Culture Nomad

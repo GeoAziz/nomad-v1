@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Twitter, Instagram, Facebook } from 'lucide-react';
+import { Twitter, Instagram, Facebook, Linkedin } from 'lucide-react';
 import { Button } from '../ui/button';
 
 export default function Footer() {
@@ -30,6 +30,9 @@ export default function Footer() {
             </Button>
             <Button variant="ghost" size="icon" asChild>
               <a href="#" aria-label="Facebook"><Facebook className="h-5 w-5 hover:text-primary transition-colors" /></a>
+            </Button>
+            <Button variant="ghost" size="icon" asChild>
+              <a href="#" aria-label="LinkedIn"><Linkedin className="h-5 w-5 hover:text-primary transition-colors" /></a>
             </Button>
           </div>
         </div>

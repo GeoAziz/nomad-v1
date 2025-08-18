@@ -10,7 +10,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import AnimatedDiv from "@/components/shared/AnimatedDiv";
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { Clock, MapPin } from 'lucide-react';
+import { Clock, MapPin, Calendar } from 'lucide-react';
 
 const highlightedEvents = [
   { name: "Annual Forex Summit", date: "Dec 15, 2024", image: "https://placehold.co/800x400.png", dataAiHint: "business conference" },

@@ -5,7 +5,7 @@ import { WhatsAppIcon } from '../icons/WhatsappIcon';
 
 export default function FloatingWhatsAppButton() {
   const phoneNumber = "+1234567890";
-  const message = "Hello VybzVerse! I'm interested in your services.";
+  const message = "Hello Culture Nomad! I'm interested in your services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (

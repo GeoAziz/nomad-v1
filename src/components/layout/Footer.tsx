@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="w-full bg-secondary/20 py-8 px-4 mt-20 border-t border-border/50">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
         <div>
-          <h3 className="font-headline text-2xl font-bold text-primary text-glow">VybzVerse</h3>
+          <h3 className="font-headline text-2xl font-bold text-primary text-glow">Culture Nomad</h3>
           <p className="text-foreground/70 mt-2">Connecting you to a universe of opportunities.</p>
         </div>
         <div>
@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto mt-8 pt-6 border-t border-border/50 text-center text-foreground/50 text-sm">
-        <p>&copy; {new Date().getFullYear()} VybzVerse. All Rights Reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Culture Nomad. All Rights Reserved.</p>
       </div>
     </footer>
   );

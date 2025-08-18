@@ -20,7 +20,7 @@ const highlightedEvents = [
 
 const allEvents = [
   { name: 'Future of Finance Webina', date: 'March 05, 2025', location: 'Online', type: 'upcoming', description: 'Join industry experts to discuss the future of decentralized finance and forex trading.', image: "https://placehold.co/600x400.png", dataAiHint: "finance webinar" },
-  { name: 'VybzVerse Launch Party', date: 'October 28, 2024', location: 'New York, NY', type: 'past', description: 'Celebrating the official launch of the VybzVerse platform with music, networking, and fun.', image: "https://placehold.co/600x400.png", dataAiHint: "launch party" },
+  { name: 'Culture Nomad Launch Party', date: 'October 28, 2024', location: 'New York, NY', type: 'past', description: 'Celebrating the official launch of the Culture Nomad platform with music, networking, and fun.', image: "https://placehold.co/600x400.png", dataAiHint: "launch party" },
   { name: 'Crypto & Coffee Meetup', date: 'September 15, 2024', location: 'San Francisco, CA', type: 'past', description: 'A casual meetup for crypto enthusiasts to discuss the latest trends over coffee.', image: "https://placehold.co/600x400.png", dataAiHint: "cafe meetup" },
 ];
 

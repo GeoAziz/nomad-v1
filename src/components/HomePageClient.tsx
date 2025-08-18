@@ -38,13 +38,13 @@ export default function HomePageClient() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const hasVisited = sessionStorage.getItem('vybzverse_visited');
+    const hasVisited = sessionStorage.getItem('cultura_nomad_visited');
     if (hasVisited) {
       setLoading(false);
     } else {
       setTimeout(() => {
         setLoading(false);
-        sessionStorage.setItem('vybzverse_visited', 'true');
+        sessionStorage.setItem('cultura_nomad_visited', 'true');
       }, 3000); // Splash screen duration
     }
   }, []);
@@ -68,13 +68,13 @@ export default function HomePageClient() {
           transition={{ duration: 0.8 }}
         >
           <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-wider text-glow">
-            Welcome to VybzVerse
+            Welcome to Culture Nomad
           </h1>
           <p className="max-w-2xl text-lg text-foreground/80">
             Discover and connect with high-value opportunities. Your one-stop platform for FX signals, events, gigs, and more.
           </p>
           <Button asChild size="lg" className="font-bold group bg-primary hover:bg-primary/90 text-primary-foreground box-glow-primary transition-all duration-300">
-            <a href="https://wa.me/+1234567890?text=I'm%20interested%20in%20VybzVerse!" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/+1234567890?text=I'm%20interested%20in%20Culture%20Nomad!" target="_blank" rel="noopener noreferrer">
               Get Hooked Now <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
@@ -114,7 +114,7 @@ export default function HomePageClient() {
           <AnimatedDiv>
             <Image
               src="https://placehold.co/600x400.png"
-              alt="VybzVerse Community"
+              alt="Culture Nomad Community"
               width={600}
               height={400}
               className="rounded-lg shadow-2xl"
@@ -124,7 +124,7 @@ export default function HomePageClient() {
           <AnimatedDiv delay={0.2}>
             <h2 className="font-headline text-4xl font-bold mb-4">Who We Are</h2>
             <p className="text-foreground/80 mb-6 text-lg">
-              VybzVerse is more than just a platform; it's an ecosystem designed for growth, connection, and success. We curate the best opportunities to help you elevate your game.
+              Culture Nomad is more than just a platform; it's an ecosystem designed for growth, connection, and success. We curate the best opportunities to help you elevate your game.
             </p>
             <Button asChild className="group">
               <Link href="/about">

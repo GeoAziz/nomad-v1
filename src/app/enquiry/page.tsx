@@ -119,7 +119,7 @@ export default function EnquiryPage() {
               For immediate assistance or collaborations, reach out to us directly on WhatsApp.
             </p>
             <Button asChild size="lg" className="font-bold group bg-primary hover:bg-primary/90 text-primary-foreground box-glow-primary transition-all duration-300">
-                <a href="https://wa.me/+1234567890?text=I'm%20interested%20in%20collaborating%20with%20VybzVerse!" target="_blank" rel="noopener noreferrer">
+                <a href="https://wa.me/+1234567890?text=I'm%20interested%20in%20collaborating%20with%20Culture%20Nomad!" target="_blank" rel="noopener noreferrer">
                 Open WhatsApp <MessageSquare className="ml-2 h-5 w-5" />
                 </a>
             </Button>

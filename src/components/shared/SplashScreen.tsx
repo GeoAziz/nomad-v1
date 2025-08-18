@@ -11,7 +11,7 @@ export default function SplashScreen() {
         transition={{ duration: 1, ease: "easeOut" }}
       >
         <h1 className="font-headline text-5xl md:text-7xl font-bold tracking-wider text-glow animate-pulse">
-          VybzVerse
+          Culture Nomad
         </h1>
       </motion.div>
     </div>

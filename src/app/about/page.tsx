@@ -28,7 +28,7 @@ const testimonials = [
   {
     name: 'Alex Johnson',
     title: 'Forex Trader',
-    quote: "VybzVerse transformed my trading journey. The signals are accurate, and the community is incredibly supportive. Highly recommended!",
+    quote: "Culture Nomad transformed my trading journey. The signals are accurate, and the community is incredibly supportive. Highly recommended!",
     avatar: 'https://placehold.co/100x100.png',
   },
   {
@@ -43,7 +43,7 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-16">
       <AnimatedDiv className="text-center">
-        <h1 className="font-headline text-5xl md:text-6xl font-bold text-glow">About VybzVerse</h1>
+        <h1 className="font-headline text-5xl md:text-6xl font-bold text-glow">About Culture Nomad</h1>
         <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
           We are the architects of connection, building bridges to a universe of opportunities. Learn about our journey and what drives us.
         </p>
@@ -79,7 +79,7 @@ export default function AboutPage() {
         <div className="md:w-1/2">
           <h2 className="font-headline text-4xl font-bold mb-4">Our Story</h2>
           <p className="text-foreground/80 mb-4">
-            Born from a desire to simplify the search for valuable opportunities, VybzVerse started as a small community on WhatsApp. We saw a need for a centralized, trusted platform where people could find legitimate FX signals, career-enhancing gigs, and meaningful connections.
+            Born from a desire to simplify the search for valuable opportunities, Culture Nomad started as a small community on WhatsApp. We saw a need for a centralized, trusted platform where people could find legitimate FX signals, career-enhancing gigs, and meaningful connections.
           </p>
           <p className="text-foreground/80">
             Today, we've evolved into a full-fledged ecosystem, but our core principle remains the same: to empower our users by providing direct access to a world of potential.

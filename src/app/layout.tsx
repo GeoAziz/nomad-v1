@@ -6,7 +6,7 @@ import Footer from '@/components/layout/Footer';
 import FloatingWhatsAppButton from '@/components/layout/FloatingWhatsAppButton';
 
 export const metadata: Metadata = {
-  title: 'VybzVerse',
+  title: 'Culture Nomad',
   description: 'Your gateway to high-value opportunities.',
 };
 

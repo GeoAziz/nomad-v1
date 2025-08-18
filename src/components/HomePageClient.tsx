@@ -10,6 +10,7 @@ import AnimatedDiv from '@/components/shared/AnimatedDiv';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
+import NewsletterSignup from './shared/NewsletterSignup';
 
 const services = [
   {
@@ -134,6 +135,9 @@ export default function HomePageClient() {
           </AnimatedDiv>
         </div>
       </section>
+
+      {/* Newsletter Signup Section */}
+      <NewsletterSignup />
 
     </div>
   );

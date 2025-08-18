@@ -11,6 +11,7 @@ import AnimatedDiv from "@/components/shared/AnimatedDiv";
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Clock, MapPin, Calendar } from 'lucide-react';
+import NewsletterSignup from '@/components/shared/NewsletterSignup';
 
 const highlightedEvents = [
   { name: "Annual Forex Summit", date: "Dec 15, 2024", image: "https://placehold.co/800x400.png", dataAiHint: "business conference" },
@@ -26,65 +27,68 @@ const allEvents = [
 
 export default function EventsPage() {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <AnimatedDiv className="text-center">
-        <h1 className="font-headline text-5xl md:text-6xl font-bold text-glow">Events</h1>
-        <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
-          Stay updated with our upcoming events and relive moments from the past.
-        </p>
-      </AnimatedDiv>
-      
-      {/* Highlighted Events Carousel */}
-      <AnimatedDiv delay={0.2} className="mt-16">
-        <h2 className="font-headline text-3xl font-bold text-center mb-8">Highlights</h2>
-        <Carousel className="w-full max-w-5xl mx-auto">
-          <CarouselContent>
-            {highlightedEvents.map((event, index) => (
-              <CarouselItem key={index}>
-                <Card className="bg-transparent border-0">
-                  <CardContent className="relative flex aspect-video items-center justify-center p-0 overflow-hidden rounded-lg">
-                    <Image src={event.image} alt={event.name} layout="fill" objectFit="cover" className="brightness-50" data-ai-hint={event.dataAiHint} />
-                    <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
-                      <h3 className="font-headline text-4xl font-bold text-white">{event.name}</h3>
-                      <p className="text-xl text-white/80 mt-2">{event.date}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <CarouselPrevious className="left-[-50px]" />
-          <CarouselNext className="right-[-50px]" />
-        </Carousel>
-      </AnimatedDiv>
+    <>
+      <div className="container mx-auto px-4 py-16">
+        <AnimatedDiv className="text-center">
+          <h1 className="font-headline text-5xl md:text-6xl font-bold text-glow">Events</h1>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+            Stay updated with our upcoming events and relive moments from the past.
+          </p>
+        </AnimatedDiv>
+        
+        {/* Highlighted Events Carousel */}
+        <AnimatedDiv delay={0.2} className="mt-16">
+          <h2 className="font-headline text-3xl font-bold text-center mb-8">Highlights</h2>
+          <Carousel className="w-full max-w-5xl mx-auto">
+            <CarouselContent>
+              {highlightedEvents.map((event, index) => (
+                <CarouselItem key={index}>
+                  <Card className="bg-transparent border-0">
+                    <CardContent className="relative flex aspect-video items-center justify-center p-0 overflow-hidden rounded-lg">
+                      <Image src={event.image} alt={event.name} layout="fill" objectFit="cover" className="brightness-50" data-ai-hint={event.dataAiHint} />
+                      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                        <h3 className="font-headline text-4xl font-bold text-white">{event.name}</h3>
+                        <p className="text-xl text-white/80 mt-2">{event.date}</p>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-[-50px]" />
+            <CarouselNext className="right-[-50px]" />
+          </Carousel>
+        </AnimatedDiv>
 
-      {/* Events Timeline */}
-      <AnimatedDiv delay={0.4} className="mt-20">
-        <h2 className="font-headline text-3xl font-bold text-center mb-12">Event Timeline</h2>
-        <div className="relative max-w-4xl mx-auto">
-          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border/50 transform -translate-x-1/2"></div>
-          {allEvents.map((event, index) => (
-            <div key={index} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
-              <div className="w-5/12"></div>
-              <div className="z-10 flex items-center justify-center w-8 h-8 bg-primary rounded-full box-glow-primary">
-                <Calendar className="w-4 h-4 text-primary-foreground" />
+        {/* Events Timeline */}
+        <AnimatedDiv delay={0.4} className="mt-20">
+          <h2 className="font-headline text-3xl font-bold text-center mb-12">Event Timeline</h2>
+          <div className="relative max-w-4xl mx-auto">
+            <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border/50 transform -translate-x-1/2"></div>
+            {allEvents.map((event, index) => (
+              <div key={index} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse' : ''}`}>
+                <div className="w-5/12"></div>
+                <div className="z-10 flex items-center justify-center w-8 h-8 bg-primary rounded-full box-glow-primary">
+                  <Calendar className="w-4 h-4 text-primary-foreground" />
+                </div>
+                <div className="w-5/12">
+                  <Card className={`p-6 bg-card/80 backdrop-blur-sm border-border hover:border-accent transition-colors ${index % 2 === 0 ? 'text-right' : ''}`}>
+                    <Badge variant={event.type === 'upcoming' ? 'default' : 'secondary'} className={`mb-2 ${event.type === 'upcoming' ? 'bg-primary' : ''}`}>{event.type}</Badge>
+                    <h3 className="font-headline text-2xl font-bold mb-2">{event.name}</h3>
+                    <div className={`flex items-center text-sm text-foreground/70 mb-3 ${index % 2 === 0 ? 'justify-end' : ''}`}>
+                      <Clock className="w-4 h-4 mr-2" /> {event.date}
+                      <MapPin className="w-4 h-4 ml-4 mr-2" /> {event.location}
+                    </div>
+                    <p className="text-foreground/80 mb-4">{event.description}</p>
+                    {event.type === 'upcoming' && <Button>Get More Info</Button>}
+                  </Card>
+                </div>
               </div>
-              <div className="w-5/12">
-                <Card className={`p-6 bg-card/80 backdrop-blur-sm border-border hover:border-accent transition-colors ${index % 2 === 0 ? 'text-right' : ''}`}>
-                  <Badge variant={event.type === 'upcoming' ? 'default' : 'secondary'} className={`mb-2 ${event.type === 'upcoming' ? 'bg-primary' : ''}`}>{event.type}</Badge>
-                  <h3 className="font-headline text-2xl font-bold mb-2">{event.name}</h3>
-                  <div className={`flex items-center text-sm text-foreground/70 mb-3 ${index % 2 === 0 ? 'justify-end' : ''}`}>
-                    <Clock className="w-4 h-4 mr-2" /> {event.date}
-                    <MapPin className="w-4 h-4 ml-4 mr-2" /> {event.location}
-                  </div>
-                  <p className="text-foreground/80 mb-4">{event.description}</p>
-                  {event.type === 'upcoming' && <Button>Get More Info</Button>}
-                </Card>
-              </div>
-            </div>
-          ))}
-        </div>
-      </AnimatedDiv>
-    </div>
+            ))}
+          </div>
+        </AnimatedDiv>
+      </div>
+      <NewsletterSignup />
+    </>
   );
 }

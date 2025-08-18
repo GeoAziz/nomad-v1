@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { BarChart, Calendar, Handshake, Lightbulb, Users, Briefcase } from 'lucide-react';
 import AnimatedDiv from '@/components/shared/AnimatedDiv';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import NewsletterSignup from '@/components/shared/NewsletterSignup';
 
 const allServices = [
   {
@@ -38,29 +39,32 @@ const allServices = [
 
 export default function ServicesPage() {
   return (
-    <div className="container mx-auto px-4 py-16">
-      <AnimatedDiv className="text-center">
-        <h1 className="font-headline text-5xl md:text-6xl font-bold text-glow">Our Services</h1>
-        <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
-          A comprehensive suite of offerings designed to elevate your success. Explore the opportunities waiting for you in the VybzVerse.
-        </p>
-      </AnimatedDiv>
+    <>
+      <div className="container mx-auto px-4 py-16">
+        <AnimatedDiv className="text-center">
+          <h1 className="font-headline text-5xl md:text-6xl font-bold text-glow">Our Services</h1>
+          <p className="mt-4 max-w-3xl mx-auto text-lg text-foreground/80">
+            A comprehensive suite of offerings designed to elevate your success. Explore the opportunities waiting for you in the Culture Nomad.
+          </p>
+        </AnimatedDiv>
 
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {allServices.map((service, index) => (
-          <AnimatedDiv key={service.title} delay={index * 0.1}>
-            <Card className="bg-card/80 border-border backdrop-blur-sm h-full text-center transition-all duration-300 hover:border-primary hover:box-glow-primary hover:-translate-y-2">
-              <CardHeader className="items-center">
-                {service.icon}
-                <CardTitle className="font-headline text-2xl mt-4">{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-foreground/70">{service.description}</p>
-              </CardContent>
-            </Card>
-          </AnimatedDiv>
-        ))}
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {allServices.map((service, index) => (
+            <AnimatedDiv key={service.title} delay={index * 0.1}>
+              <Card className="bg-card/80 border-border backdrop-blur-sm h-full text-center transition-all duration-300 hover:border-primary hover:box-glow-primary hover:-translate-y-2">
+                <CardHeader className="items-center">
+                  {service.icon}
+                  <CardTitle className="font-headline text-2xl mt-4">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-foreground/70">{service.description}</p>
+                </CardContent>
+              </Card>
+            </AnimatedDiv>
+          ))}
+        </div>
       </div>
-    </div>
+      <NewsletterSignup />
+    </>
   );
 }
